@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memórias Escolares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Memórias Escolares</h1>
+            <p>Reviva os momentos inesquecíveis da minha jornada escolar.</p>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <div class="photo" onclick="openModal('foto1.jpg', 'Primeiro dia de fevereiro, a aula no laboratório')">
+            <img src="foto1.jpg" alt="Foto com amigos e professor">
+        </div>
+        <div class="photo" onclick="openModal('foto2.jpg', 'Primeiro dia de aula com uma maluca 2023')">
+            <img src="foto2.jpg" alt="Foto com Rafael">
+        </div>
+        <div class="photo" onclick="openModal('foto3.jpg', 'Um porquinho 🥰')">
+            <img src="foto3.jpg" alt="Eu nas plantas">
+        </div>
+        <div class="photo" onclick="openModal('foto4.jpg', 'As aventuras da pequena Isadora no meio do mato')">
+            <img src="foto4.jpg" alt="Na volta do colégio com meu irmão">
+        </div>
+        <div class="photo" onclick="openModal('foto5.jpg', 'A folga do cara')">
+            <img src="foto5.jpg" alt="Meu amigo Freitas!!">
+        </div>
+        <div class="photo" onclick="openModal('foto6.jpg', 'Formatura 🎓')">
+            <img src="foto6.jpg" alt="Excursão para o farol">
+        </div>
+        <div class="photo" onclick="openModal('foto7.jpg', 'Cesta perfeita 🏀🏀')">
+            <img src="foto7.jpg" alt="Eu e minha amiga Ketlin">
+        </div>
+        <div class="photo" onclick="openModal('foto8.jpg', 'Prof mais linda ♥♥')">
+            <img src="foto8.jpg" alt="O grupo do fundo">
+        </div>
+        <div class="photo" onclick="openModal('foto9.jpg', 'Para espantar mosquito')">
+            <img src="foto9.jpg" alt="Osvaldinho Drumdrum">
+        </div>
+        <div class="photo" onclick="openModal('foto10.jpg', '.')">
+            <img src="foto10.jpg" alt="Recreio divertido">
+        </div>
+        <div class="photo" onclick="openModal('foto11.jpg', '.')">
+            <img src="foto11.jpg" alt="Aniversário na escola">
+        </div>
+        <div class="photo" onclick="openModal('foto12.jpg', '.')">
+            <img src="foto12.jpg" alt="Dia de esporte">
+        </div>
+        <div class="photo" onclick="openModal('foto13.jpg', 'O hospício')">
+            <img src="foto13.jpg" alt="Passeio no parque">
+        </div>
+        <div class="photo" onclick="openModal('foto14.jpg', 'Trabalho básico de sociologia')">
+            <img src="foto14.jpg" alt="Formatura">
+        </div>
+        <div class="photo" onclick="openModal('foto15.jpg', 'Mulheres Aranha 🕷')">
+            <img src="foto15.jpg" alt="Projeto de ciências">
+        </div>
+        <div class="photo" onclick="openModal('foto16.jpg', 'Eu e Nicolas os atuadores!!!')">
+            <img src="foto16.jpg" alt="Viagem escolar">
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Memórias Escolares - Todos os direitos reservados a Thayla</p>
+    </footer>
+
+    <script>
+        // Função para abrir o modal e exibir a imagem com a legenda
+        function openModal(src, captionText) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modalImg");
+            var caption = document.getElementById("caption");
+
+            modal.style.display = "flex"; // Mostra o modal
+            modalImg.src = src; // Define a imagem no modal
+            caption.innerHTML = captionText; // Define a legenda
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none"; // Oculta o modal
+        }
+    </script>
+</body>
+</html>
